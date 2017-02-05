@@ -1,7 +1,7 @@
 development:
   adapter:  postgresql
   encoding: utf8
-  database: test_flatstack_db
+  database: flatstack_db
   username: ilnar
   password: 104Hmoa)
   host:     localhost
