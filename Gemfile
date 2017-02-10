@@ -18,9 +18,10 @@ gem 'bootstrap-sass'
 gem 'therubyracer'
 gem 'rake', '~> 0.9.6'
 gem 'bcrypt-ruby', '3.1.2'
-gem 'momentjs-rails', '>= 2.9.0'
 gem 'jquery-turbolinks'
-gem 'bootstrap3-datetimepicker-rails', '~> 4.17.43'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
+gem 'fullcalendar-rails'
 
 group :development, :test do
   gem 'byebug'

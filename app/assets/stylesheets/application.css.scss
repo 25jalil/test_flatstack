@@ -1,5 +1,6 @@
 /*
  *= require_self
+ *= require fullcalendar
  *= require_tree .
  */
 @import "bootstrap-sprockets";
@@ -19,16 +20,17 @@ body {
   width: 100%;
   margin:0px auto;
   position: fixed;
+  z-index: 1;
 
   .block_head{
     width: 65%;
     height: 47px;
-    margin:0px auto;
+    margin: 0px auto;
     background: #E0FFFF;
     border-radius: 10px;
     #logo img {
       float: left;
-      margin-top: 1px;
+      margin-top: 3px;
       margin-left: 40px;
       border-radius: 4px;
       width:41px;
@@ -76,11 +78,20 @@ body {
   background: #E0FFFF;
   border: 1px solid #CCC;
   border-radius: 15px;
-  height: 2000px;
+  height: auto;
   margin: 55px auto;
+
   .block{
+    position: relative;
     width: 95%;
     height: 100%;
-    margin: 55px auto;
+    margin: 30px auto;
   }
+
+  .form-control {
+    width: 220px;
+    min-width: 0;
+    display: inline;
+  }
+
 }

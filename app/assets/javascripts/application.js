@@ -14,13 +14,24 @@
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require bootstrap-sprockets
-//= require turbolinks
 //= require moment
 //= require bootstrap-datetimepicker
+//= require fullcalendar
 //= require_tree .
 
 $(function () {
-  $('#event_end_date').datetimepicker({
-    format: 'YYYY-MM-DD HH:mm:ss'
+  $(".date_time_picker").datetimepicker({
+    format: 'YYYY-MM-DD',
+    widgetPositioning:{
+      horizontal: 'auto',
+      vertical: 'bottom'
+    }
   });
 });
+
+$(document).ready(function() {
+  $("#calendar").fullCalendar({
+    events: '/posts.json'
+  });
+});
+
