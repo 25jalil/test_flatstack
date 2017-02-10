@@ -11,7 +11,16 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require jquery.turbolinks
+//= require bootstrap-sprockets
 //= require turbolinks
+//= require moment
+//= require bootstrap-datetimepicker
 //= require_tree .
+
+$(function () {
+  $('#event_end_date').datetimepicker({
+    format: 'YYYY-MM-DD HH:mm:ss'
+  });
+});

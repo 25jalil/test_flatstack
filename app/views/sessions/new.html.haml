@@ -1,0 +1,7 @@
+.block
+  %h4= "Sign in"
+  = simple_form_for :session, { url: sessions_path } do |f|
+    = f.input :email, required: false, label: false, placeholder: "Email"
+    = f.input :password, required: false, label: false, placeholder: "Password"
+    = f.submit "Sign in", class: "btn btn-info"
+

@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6 }
   validates :password_confirmation, presence: true
 
+  has_many :events
+
   def User.new_remember_token
     SecureRandom.urlsafe_base64
   end
@@ -25,7 +27,7 @@ class User < ActiveRecord::Base
     end
 
     def add_admin
-      if User.all.empty?
+      if User.first.nil?
         self.admin = true
       end
     end

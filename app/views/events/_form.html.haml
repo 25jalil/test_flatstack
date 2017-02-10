@@ -1,0 +1,9 @@
+= simple_form_for @event do |f|
+  = f.input :title, required: false, label: false, placeholder: "Title"
+  = f.input :start_date, required: false, label: false, placeholder: "Start date",
+  = f.input :end_date, required: false, label: false, placeholder: "End date"
+  = f.input :replay, required: false, label: false, placeholder: "replay"
+
+  = f.submit 'Submit', class: "btn btn-info"
+
+

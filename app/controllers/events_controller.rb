@@ -1,6 +1,5 @@
 class EventsController < ApplicationController
   before_action :find_event, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
-  before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
 
   def index
   end
@@ -9,7 +8,7 @@ class EventsController < ApplicationController
   end
 
   def new
-    @post = Event.new
+    @event = Event.new
   end
 
   def edit
@@ -29,7 +28,7 @@ class EventsController < ApplicationController
 
   def update
     respond_to do |format|
-      if @pevent.update(event_params)
+      if @event.update(event_params)
         format.html { redirect_to @event, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @event }
       else
@@ -56,6 +55,6 @@ class EventsController < ApplicationController
     end
 
     def event_params
-      params.require(:event).permit(:title, :body, :category_id, :tags)
+      params.require(:event).permit(:title)
     end
 end
