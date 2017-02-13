@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :events
+
   has_secure_password
 
   before_save { self.email = email.downcase }
@@ -10,7 +12,6 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6 }
   validates :password_confirmation, presence: true
 
-  has_many :events
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64

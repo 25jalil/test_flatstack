@@ -22,7 +22,7 @@
 $(function () {
   $(".date_time_picker").datetimepicker({
     format: 'YYYY-MM-DD',
-    widgetPositioning:{
+    widgetPositioning: {
       horizontal: 'auto',
       vertical: 'bottom'
     }
@@ -31,7 +31,7 @@ $(function () {
 
 $(document).ready(function() {
   $("#calendar").fullCalendar({
-    events: '/posts.json'
+    events: '/events.json'
   });
 });
 
