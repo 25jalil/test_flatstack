@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20170210072125) do
     t.integer "user_id"
     t.string  "title"
     t.string  "replay"
-    t.string  "start_date"
-    t.string  "end_date"
+    t.string  "start"
+    t.string  "end"
   end
 
   create_table "users", force: :cascade do |t|

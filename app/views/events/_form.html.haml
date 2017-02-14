@@ -1,7 +1,7 @@
 = simple_form_for @event do |f|
   = f.input :title, required: false, label: false, placeholder: "Title"
-  = f.input :start_date, as: :date_time_picker, required: false, label: false, placeholder: "Start date", input_html: {class: "form-control"}
-  = f.input :end_date, as: :date_time_picker, required: false, label: false, placeholder: "End date", input_html: {class: "form-control"}
+  = f.input :start, as: :date_time_picker, required: false, label: false, placeholder: "Start date", input_html: {class: "form-control"}
+  = f.input :end, as: :date_time_picker, required: false, label: false, placeholder: "End date", input_html: {class: "form-control"}
   = f.input :replay, required: false, prompt: "Replay:", as: :radio_buttons, collection: ["Day", "Week", "Month", "Year"]
 
   = f.submit 'Submit', class: "btn btn-info"

@@ -3,6 +3,6 @@ class Event < ActiveRecord::Base
 
   validates :title, presence: true, length: { maximum: 30}, uniqueness: true
   validates :replay, presence: true
-  validates :start_date, presence: true
-  validates :end_date, presence: true
+  validates :start, presence: true
+  validates :end, presence: true
 end

@@ -15,23 +15,21 @@
 //= require jquery.turbolinks
 //= require bootstrap-sprockets
 //= require moment
+//= require turbolinks
 //= require bootstrap-datetimepicker
 //= require fullcalendar
 //= require_tree .
-
-$(function () {
-  $(".date_time_picker").datetimepicker({
-    format: 'YYYY-MM-DD',
-    widgetPositioning: {
-      horizontal: 'auto',
-      vertical: 'bottom'
-    }
+var datapicker;
+datapicker = function (){
+  $(function () {
+    $(".date_time_picker").datetimepicker({
+      format: 'YYYY-MM-DD',
+      widgetPositioning: {
+        horizontal: 'auto',
+        vertical: 'bottom'
+      }
+    });
   });
-});
+};
 
-$(document).ready(function() {
-  $("#calendar").fullCalendar({
-    events: '/events.json'
-  });
-});
-
+$(document).on('turbolinks:load', datapicker);

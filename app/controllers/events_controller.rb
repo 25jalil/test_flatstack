@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   before_action :find_event, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 
   def index
+    @events = Event.where(start: params[:start]..params[:end])
   end
 
   def show
@@ -17,8 +18,6 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.user_id = current_user.id
-    @event.start_date = (params[:event][:start_date]).to_time
-    @event.end_date = (params[:event][:end_date]).to_time
 
     if @event.save
       flash[:success] = "Success!!!"
@@ -58,6 +57,6 @@ class EventsController < ApplicationController
     end
 
     def event_params
-      params.require(:event).permit(:title, :start_date, :end_date, :replay)
+      params.require(:event).permit(:title, :start, :end, :replay)
     end
 end
