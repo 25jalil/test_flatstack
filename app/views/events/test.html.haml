@@ -1,2 +1,2 @@
 - @events_all.each do |i|
-  = i
+  = i[:start].to_time.strftime('%Y-%m-%dT%H:%M:%S')
