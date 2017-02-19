@@ -3,6 +3,11 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+    @events_all = []
+    (0...@events.size).each do |i|
+      @events_all << schedule(@events[i])
+    end
+    @events_all = @events_all.flatten
   end
 
   def show
@@ -52,8 +57,12 @@ class EventsController < ApplicationController
   end
 
   def test
-     event = Event.last
-     @tv = schedule(event)
+    @events = Event.all
+    @events_all = []
+    (0...@events.size).each do |i|
+      @events_all << schedule(@events[i])
+    end
+    @events_all = @events_all.flatten
   end
 
   private
