@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :find_event, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 
   def index
-    @events = Event.where(start: params[:start]..params[:end])
+    @events = Event.all
   end
 
   def show
@@ -21,7 +21,7 @@ class EventsController < ApplicationController
 
     if @event.save
       flash[:success] = "Success!!!"
-      redirect_to root_path
+      redirect_to test_path
     else
       flash.now[:error]= "Invalid form"
       render 'new'
@@ -49,6 +49,11 @@ class EventsController < ApplicationController
   end
 
   def calendar
+  end
+
+  def test
+     event = Event.last
+     @tv = schedule(event)
   end
 
   private
