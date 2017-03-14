@@ -33,3 +33,4 @@ datapicker = function (){
 };
 
 $(document).on('turbolinks:load', datapicker);
+

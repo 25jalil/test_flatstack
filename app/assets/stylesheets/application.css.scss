@@ -94,4 +94,15 @@ body {
     display: inline;
   }
 
+  #event_content {
+   padding: 2em 5%;
+   border-radius: .5em;
+   h1 {
+     font-weight: 100;
+     font-size: 2em;
+     color: #397CAC;
+     margin-top: 0;
+   }
+  }
+
 }

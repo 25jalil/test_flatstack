@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :find_event, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
+  before_action :find_event, only: [:show, :edit, :update, :destroy]
 
   def index
     @events = Event.all
@@ -26,7 +26,7 @@ class EventsController < ApplicationController
 
     if @event.save
       flash[:success] = "Success!!!"
-      redirect_to test_path
+      redirect_to root_path
     else
       flash.now[:error]= "Invalid form"
       render 'new'
