@@ -12,9 +12,8 @@ calendar = function (){
       editable: true,
       eventLimit: true,
       events: '/events.json',
-      eventClick: function(event, element) {
-        event.title = "CLICKED!";
-          $('#calendar').fullCalendar('updateEvent', event);
+      eventClick: function(event) {
+        event.url
       }
     });
   });

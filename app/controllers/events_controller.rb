@@ -56,15 +56,6 @@ class EventsController < ApplicationController
   def calendar
   end
 
-  def test
-    @events = Event.all
-    @events_all = []
-    (0...@events.size).each do |i|
-      @events_all << schedule(@events[i])
-    end
-    @events_all = @events_all.flatten
-  end
-
   private
     def find_event
       @event = Event.find(params[:id])
