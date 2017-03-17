@@ -22,8 +22,6 @@ gem 'jquery-turbolinks'
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
 gem 'fullcalendar-rails'
-gem 'ice_cube'
-gem 'recurring_select'
 
 group :development, :test do
   gem 'byebug'

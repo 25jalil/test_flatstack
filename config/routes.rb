@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'events#calendar'
   resources :events
+  get 'my_events', to: 'events#my_events'
 
   resources :sessions, only: [:new, :create, :destroy]
   resources :users
@@ -8,6 +9,5 @@ Rails.application.routes.draw do
   match '/signin',  to: 'sessions#new',     via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
 
-  match '/test',  to: 'events#test',        via: 'get'
 end
 

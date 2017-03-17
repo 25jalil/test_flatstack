@@ -10,6 +10,15 @@ class EventsController < ApplicationController
     @events_all = @events_all.flatten
   end
 
+  def my_events
+    @events = Event.where(user_id: current_user.id)
+    @events_all = []
+    (0...@events.size).each do |i|
+      @events_all << schedule(@events[i])
+    end
+    @events_all = @events_all.flatten
+  end
+
   def show
   end
 

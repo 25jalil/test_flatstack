@@ -11,5 +11,6 @@ json.array! @events_all do |event|
   else
     json.url event_path(event)
   end
+  json.my_events my_events_path
 end
 

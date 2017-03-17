@@ -88,7 +88,6 @@ GEM
     haml (4.0.7)
       tilt
     i18n (0.8.0)
-    ice_cube (0.15.0)
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -148,12 +147,6 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (0.9.6)
     rdoc (4.3.0)
-    recurring_select (2.0.0)
-      coffee-rails (>= 3.1)
-      ice_cube (>= 0.11)
-      jquery-rails (>= 3.0)
-      rails (>= 3.2)
-      sass-rails (>= 4.0)
     ref (2.0.0)
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
@@ -238,7 +231,6 @@ DEPENDENCIES
   faker (~> 1.6.1)
   fullcalendar-rails
   haml
-  ice_cube
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
@@ -246,7 +238,6 @@ DEPENDENCIES
   pg
   rails (= 4.2.3)
   rake (~> 0.9.6)
-  recurring_select
   rspec-rails (~> 3.4)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
