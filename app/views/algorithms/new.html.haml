@@ -1,0 +1,6 @@
+.block
+  = simple_form_for :algorithms, url: algorithms_path, method: :get do |f|
+    = f.input :number, required: false, label: false, placeholder: "Number"
+    = f.submit 'Submit', class: "btn btn-info"
+
+

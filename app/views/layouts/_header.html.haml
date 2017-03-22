@@ -1,9 +1,12 @@
 #logo
   = link_to root_path do
     = image_tag "download.png"
+#algorithm
+  = link_to "Algorithm", new_algorithms_path
 #menu_head
   .dropdown
     %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+
       - if signed_in?
         - if current_user.admin?
           Admin menu
